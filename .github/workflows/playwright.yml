@@ -39,7 +39,7 @@ jobs:
         run: npx playwright test --project=${{ matrix.browser }} # Run tests on multiple browsers
 
       - name: Upload Playwright test report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always() # Upload the test results even if tests fail
         with:
           name: playwright-report
